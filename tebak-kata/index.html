@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tebak Buah</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-card">
+        <h1>Tebak Buah</h1>
+        
+        <img src="https" 
+             alt="Tebak Buah" 
+             id="fruit-image">
+        
+        <div class="clue-container">
+            <strong>Petunjuk:</strong>
+            <p id="clue-text">...</p>
+        </div>
+        
+        <label for="guess-input">Apa nama buahnya?</label>
+        <input type="text" id="guess-input" placeholder="Ketik jawabanmu di sini...">
+        <button id="guess-button">Tebak!</button>
+        
+        <p class="message" id="message"></p>
+        
+        <div class="stats-container">
+            Sisa tebakan: <span id="guesses-left">5</span>
+        </div>
+        
+        <button id="reset-button" style="display:none;">Main Lagi</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

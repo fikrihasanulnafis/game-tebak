@@ -1,0 +1,167 @@
+/* Menggunakan font Poppins yang sudah kita impor */
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+    /* BARU: Background dengan gradien yang segar */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.game-card {
+    background-color: #ffffff;
+    border-radius: 20px; /* Lebih bulat */
+    
+    /* BARU: Bayangan (shadow) yang lebih halus dan modern */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    
+    padding: 28px;
+    width: 100%;
+    max-width: 420px; /* Sedikit lebih lebar */
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    
+    /* BARU: Animasi saat kartu muncul */
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #333;
+    font-weight: 700; /* Lebih tebal */
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#fruit-image {
+    width: 100%;
+    height: 220px; /* Tinggi gambar yang konsisten */
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    
+    /* BARU: Memastikan gambar pas tanpa distorsi */
+    object-fit: cover; 
+}
+
+.clue-container {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 20px;
+}
+
+.clue-container strong {
+    color: #007bff; /* Warna biru primer */
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+#clue-text {
+    font-size: 1rem;
+    color: #495057;
+    margin: 0;
+    font-style: italic;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+#guess-input {
+    width: 100%;
+    padding: 14px; /* Lebih besar */
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif; /* Terapkan font */
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    box-sizing: border-box; 
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
+}
+
+/* BARU: Efek 'focus' pada input */
+#guess-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0,123,255,0.2);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif; /* Terapkan font */
+    padding: 15px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* BARU: Warna tombol "Tebak" dan efeknya */
+#guess-button {
+    background-color: #28a745; /* Hijau sukses */
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+}
+
+#guess-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px); /* Efek terangkat */
+}
+
+/* BARU: Warna tombol "Main Lagi" dan efeknya */
+#reset-button {
+    background-color: #fd7e14; /* Oranye */
+    box-shadow: 0 4px 15px rgba(253, 126, 20, 0.2);
+    margin-top: 12px;
+}
+
+#reset-button:hover {
+    background-color: #e66a00;
+    transform: translateY(-2px);
+}
+
+.stats-container {
+    margin-top: 16px;
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* BARU: Tampilan pesan feedback yang lebih jelas */
+.message {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 8px;
+}
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
